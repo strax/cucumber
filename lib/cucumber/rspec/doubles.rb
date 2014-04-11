@@ -1,10 +1,8 @@
-require 'rspec/core'
-
-RSpec.configuration.configure_mock_framework
-World(RSpec::Core::MockFrameworkAdapter)
+require 'rspec/mocks'
+World(RSpec::Mocks::ExampleMethods)
 
 Before do
-  RSpec::Mocks::setup(self)
+  RSpec::Mocks::setup
 end
 
 After do
